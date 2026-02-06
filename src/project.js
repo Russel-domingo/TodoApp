@@ -13,7 +13,11 @@ export class Project {
         this.tasks.push(task);
     }
 
-    deleteTask(index){
-        this.tasks.splice(index, 1);
+    deleteTask(taskId){
+        this.tasks = this.tasks.filter(task => task.id !== taskId);
+    }
+
+    getTask(taskId) {
+        return this.tasks.find(task => task.id === taskId);
     }
 }

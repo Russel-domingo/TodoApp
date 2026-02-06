@@ -5,7 +5,7 @@ export class Task {
         this.completed = false;
     }
 
-    toggle() {
+    toggleComplete() {
         this.completed = !this.completed;
     }
 }
