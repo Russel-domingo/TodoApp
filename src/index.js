@@ -1,5 +1,5 @@
 import "./styles/styles.css";
-import {addProjectModal} from "./addProjectModal.js";
+import { addProjectModal } from "./addProjectModal.js";
 import { renderProject } from "./renderProject.js";
 const projects = [];
 

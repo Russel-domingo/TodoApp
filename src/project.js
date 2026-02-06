@@ -1,3 +1,4 @@
+import { Task } from "./task.js"
 
 export class Project {
     constructor(projectName, projectDescription) {
@@ -8,7 +9,8 @@ export class Project {
     }
 
     addTask(taskName) {
-        this.tasks.push(taskName);
+        const task = new Task(taskName)
+        this.tasks.push(task);
     }
 
     deleteTask(index){
