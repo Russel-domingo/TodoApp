@@ -46,7 +46,7 @@ export function renderProject(projects) {
 
         addTaskBtn.addEventListener("click", () => {
             const targetProject = currentProject || generalProject;
-            addTask(project);
+            addTask(targetProject);
         });
 
         projectDiv.append(projectName, projectDescription, addTaskBtn);

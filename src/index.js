@@ -9,7 +9,7 @@ const modal = addProjectModal((project) => {
     projects.push(project);
     renderProject(projects);
 
-    renderTask(currentProject);
+    // renderTask(project);
 });
 
 const addProjectBtn = document.createElement("button");

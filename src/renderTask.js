@@ -8,13 +8,14 @@ export function renderTask (project) {
         document.body.appendChild(container);
     }
 
+    const container = document.getElementById("taskContainer");
+    container.innerHTML = "";
+
     if (!project) {
         container.innerHTML = "<p>Select a project to see tasks</p>"
         return;
     }
-    const container = document.getElementById("taskContainer");
-    container.innerHTML = "";
-
+    
     project.tasks.forEach(task => {
         const taskDiv = document.createElement("div");
         taskDiv.className = "task";

@@ -1,4 +1,5 @@
 import { renderTask } from "./renderTask.js";
+
 export function addTask (project) {
 
     const taskModal = document.createElement("div");
@@ -13,16 +14,28 @@ export function addTask (project) {
     const saveTask = document.createElement("button");
     saveTask.textContent = "add task";
 
+    const cancelTaskBtn = document.createElement("button");
+    cancelTaskBtn.textContent = "Cancel";
     saveTask.addEventListener("click", () => {
         if (!titleInput.value.trim()) {
             return;
         }
         project.addTask(titleInput.value);
         renderTask(project);
+        titleInput.value = "";
         taskModal.remove();
         console.log(project.tasks);
     });
 
+    cancelTaskBtn.addEventListener("click", () => {
+        taskModal.remove();
+    });
+
+    taskModal.addEventListener("click", (e) => {
+        if (e.target === taskModal) {
+            taskModal.remove();
+        }
+    });
     taskBox.append(titleInput, saveTask);
     taskModal.appendChild(taskBox);
     document.body.appendChild(taskModal);
