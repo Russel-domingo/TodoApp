@@ -1,3 +1,4 @@
+
 export function renderTask (project) {
     let taskContainer = document.getElementById("taskContainer");
     
@@ -8,7 +9,7 @@ export function renderTask (project) {
     }
 
     if (!project) {
-        taskContainer.innerHTML = "<p>Select a project to see tasks</p>"
+        container.innerHTML = "<p>Select a project to see tasks</p>"
         return;
     }
     const container = document.getElementById("taskContainer");

@@ -18,6 +18,7 @@ export function addTask (project) {
             return;
         }
         project.addTask(titleInput.value);
+        renderTask(project);
         taskModal.remove();
         console.log(project.tasks);
     });

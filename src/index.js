@@ -1,11 +1,15 @@
 import "./styles/styles.css";
 import { addProjectModal } from "./addProjectModal.js";
-import { renderProject } from "./renderProject.js";
-const projects = [];
+import { currentProject, renderProject } from "./renderProject.js";
+import { generalProject } from "./generalProject.js";
+import { renderTask } from "./renderTask.js";
+const projects = [generalProject];
 
 const modal = addProjectModal((project) => {
     projects.push(project);
     renderProject(projects);
+
+    renderTask(currentProject);
 });
 
 const addProjectBtn = document.createElement("button");
@@ -17,3 +21,6 @@ addProjectBtn.addEventListener("click", () =>{
 });
 
 document.body.appendChild(addProjectBtn);
+
+renderProject(projects);
+renderTask(generalProject);
