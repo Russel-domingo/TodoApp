@@ -1,3 +1,4 @@
+import "./styles/renderTaskStyle.css"
 
 export function renderTask (project) {
     let taskContainer = document.getElementById("taskContainer");

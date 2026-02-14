@@ -54,6 +54,8 @@ export function addProjectModal (addProject) {
 
     return {
         open () {
+            nameInput.value = "";
+            description.value = "";
             modal.style.display = "flex";
         },
         close () {
