@@ -1,3 +1,5 @@
+import "./styles/addTaskStyle.css";
+
 import { renderTask } from "./renderTask.js";
 
 export function addTask (project) {
@@ -36,7 +38,7 @@ export function addTask (project) {
             taskModal.remove();
         }
     });
-    taskBox.append(titleInput, saveTask);
+    taskBox.append(titleInput, saveTask, cancelTaskBtn);
     taskModal.appendChild(taskBox);
     document.body.appendChild(taskModal);
 }
